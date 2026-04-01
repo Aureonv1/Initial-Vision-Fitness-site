@@ -20,6 +20,15 @@ async function parse<T>(res: Response): Promise<T> {
   }
 }
 
+async function getErrorMessage(res: Response, fallback: string) {
+  try {
+    const data = await parse<{ error?: string }>(res);
+    return data.error || fallback;
+  } catch {
+    return fallback;
+  }
+}
+
 export async function fetchSite(): Promise<SiteData> {
   const res = await fetch('/api/site');
   if (!res.ok) throw new Error('Failed to load site');
@@ -45,7 +54,7 @@ export async function login(password: string): Promise<void> {
     credentials: 'include',
     body: JSON.stringify({ password }),
   });
-  if (!res.ok) throw new Error('Invalid password');
+  if (!res.ok) throw new Error(await getErrorMessage(res, 'Login failed'));
 }
 
 export async function logout(): Promise<void> {
@@ -65,12 +74,12 @@ export async function saveSite(data: SiteData): Promise<void> {
     credentials: 'include',
     body: JSON.stringify(data),
   });
-  if (!res.ok) throw new Error('Save failed');
+  if (!res.ok) throw new Error(await getErrorMessage(res, 'Save failed'));
 }
 
 export async function fetchMessages(): Promise<MessageEntry[]> {
   const res = await fetch('/api/messages', { credentials: 'include' });
-  if (!res.ok) throw new Error('Unauthorized');
+  if (!res.ok) throw new Error(await getErrorMessage(res, 'Unauthorized'));
   return parse<MessageEntry[]>(res);
 }
 
@@ -79,5 +88,5 @@ export async function deleteMessage(id: string): Promise<void> {
     method: 'DELETE',
     credentials: 'include',
   });
-  if (!res.ok) throw new Error('Delete failed');
+  if (!res.ok) throw new Error(await getErrorMessage(res, 'Delete failed'));
 }

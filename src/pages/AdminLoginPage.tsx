@@ -23,8 +23,8 @@ export function AdminLoginPage() {
     try {
       await login(password);
       navigate(SECRET_ADMIN_HOME, { replace: true });
-    } catch {
-      setErr('Invalid password.');
+    } catch (error) {
+      setErr(error instanceof Error ? error.message : 'Login failed.');
     } finally {
       setLoading(false);
     }
