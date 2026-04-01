@@ -1,0 +1,81 @@
+{
+  "heroTag": "3D Immersion Studio",
+  "heroTitle": "Train inside a cinematic 3D gym experience.",
+  "heroSubtitle": "Vision Fitness blends high-performance programming with interactive 3D space. Move through the studio, explore equipment, and preview your training flow before you ever step inside.",
+  "stats": [
+    {
+      "label": "Active Members",
+      "value": "540+"
+    },
+    {
+      "label": "Elite Coaches",
+      "value": "14"
+    },
+    {
+      "label": "Classes Weekly",
+      "value": "86"
+    }
+  ],
+  "experienceCards": [
+    {
+      "title": "Spatial Coaching",
+      "copy": "Coaches map movement patterns in real time for precision feedback."
+    },
+    {
+      "title": "Cinematic Recovery",
+      "copy": "Hydration and recovery bays lit with adaptive mood lighting."
+    },
+    {
+      "title": "Velocity Tracking",
+      "copy": "Live force metrics projected onto 3D equipment overlays."
+    },
+    {
+      "title": "24/7 Access",
+      "copy": "Secure entry with full studio telemetry at any hour."
+    }
+  ],
+  "trainingCards": [
+    "Powerlifting vaults with competition calibration.",
+    "Dynamic cardio pods with cinematic skyline views.",
+    "Precision recovery chamber for nightly resets.",
+    "Private coaching pods with focus lighting presets."
+  ],
+  "tiers": [
+    {
+      "name": "Prime Core",
+      "price": "12K LKR",
+      "desc": "Open gym access, smart recovery lounge, weekly assessments."
+    },
+    {
+      "name": "Blackout Elite",
+      "price": "24K LKR",
+      "desc": "Personal programming, nutrition sync, priority studio time."
+    },
+    {
+      "name": "Apex Foundry",
+      "price": "38K LKR",
+      "desc": "Daily coaching, biometric tracking, competition prep."
+    }
+  ],
+  "ctaTitle": "Book a cinematic tour of Vision Fitness.",
+  "ctaCopy": "Walk through the full 3D space with a coach and preview the training flow tailored for you.",
+  "footerRights": "© 2026 Vision Fitness. All rights reserved.",
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/visionfitnessdemo"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://facebook.com/visionfitnessdemo"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://facebook.com/visionfitnessdemo"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://facebook.com/visionfitnessdemo"
+    }
+  ]
+}
